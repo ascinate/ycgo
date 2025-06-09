@@ -1,0 +1,312 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+
+/* global css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+.sub-text {
+    color: #5F6368;
+}
+
+:root {
+    --text-white: #ffffff;
+    --theme-color: #600EE4;
+    --secondary-theme-color: #684ac4;
+}
+
+
+@media (min-width: 1000px) {
+    .wrapper {
+        width: 1200px;
+        margin: auto;
+    }
+}
+
+.theme-color-btn {
+    background-color: var(--secondary-theme-color);
+    color: var(--text-white) !important;
+    padding: 14px 35px;
+    font-weight: 600;
+   border-radius: 15px;
+
+}
+
+
+header {
+    z-index: 99;
+
+}
+
+/* navbar start */
+nav{
+    padding-block: 20px;
+}
+.navLink ul>li {
+    padding-left: 40px;
+    font-weight: 500;
+    font-size: 18px;
+
+    &:nth-of-type(1) {
+        padding-left: 0px;
+    }
+}
+
+.navLogo {
+    font-size: 35px;
+    font-weight: 600;
+}
+.secondary-theme-btn {
+    margin-left: 20px;
+    background-color: var(--secondary-theme-color);
+    color: var(--text-white) !important;
+    padding: 14px 35px;
+   font-size: 18px;
+    font-weight: 600;
+   border-radius: 15px;
+
+}
+
+.m-theebar {
+    display: none;
+}
+
+@media (max-width: 576px) {
+
+    .showManu {
+        position: absolute;
+        display: block;
+        top: 12%;
+        text-align: center;
+        background-color: var(--text-white);
+        width: 100%;
+        z-index: 1;
+    }
+
+    .hideManu {
+        display: none;
+    }
+
+    .navLink li {
+        padding: 0;
+        font-size: 22px;
+    }
+
+    .secondary-theme-btn {
+        display: none;
+    }
+
+    .m-theebar {
+        display: block !important;
+        z-index: 999;
+        position: relative;
+        float: right;
+    }
+}
+
+
+
+
+/* navbar end */
+
+
+
+/*:::::::::::::Home page start::::::::::::*/
+
+/* hero section start */
+
+
+
+.container-hero {
+    position: relative;
+    height: 80vh;
+}
+
+.hero-main-text {
+    font-size: 55px;
+
+}
+
+
+.white-color-btn {
+    margin-left: 20px;
+    border: 2px solid var(--secondary-theme-color);
+    color: var(--secondary-theme-color);
+    padding: 14px 35px;
+    font-weight: 600;
+border-radius: 15px;
+}
+
+.m-nav-btn-hide{
+    position: relative;
+    & input:focus{
+        background-color: lightgray;
+        border-radius: 25px;
+        outline: none;
+        margin-left: 20px;
+        padding-left: 15px;
+        
+    }
+}
+
+.search-icon{
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+header,
+.section-hero{
+    background-color: rgb(241, 241, 241);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.hero-img {
+    position: relative;
+}
+
+
+
+.yone {
+    width: 200px;
+    aspect-ratio: 1;
+    animation: oone 2s alternate infinite;
+    -webkit-animation: yone 2s alternate infinite;
+}
+
+@keyframes yone {
+    0% {
+        transform: translate(0);
+    }
+
+    100% {
+        transform: translate(-40px);
+        -webkit-transform: translate(-40px);
+        -moz-transform: translate(-40px);
+        -ms-transform: translate(-40px);
+        -o-transform: translate(-40px);
+    }
+}
+
+
+.ytwo {
+    width: 150px;
+    aspect-ratio: 1;
+    position: absolute;
+    top: -45%;
+    right: 20%;
+    width: 60px;
+    animation: ytwo 0.5s infinite;
+    -webkit-animation: ytwo 0.5s infinite;
+}
+
+@keyframes ytwo {
+
+    from,
+    to {
+        transform: scale(1, 1);
+    }
+
+    25% {
+        transform: scale(0.9, 1.1);
+    }
+
+    50% {
+        transform: scale(1.1, 0.9);
+    }
+
+    75% {
+        transform: scale(0.95, 1.05);
+    }
+}
+
+
+.ythree {
+ position: absolute;
+ width: 100px;
+ top: 94%;
+ left: -42%;
+ animation: ythree 0.5s infinite;
+ -webkit-animation: ythree 0.5s infinite;
+}
+@keyframes ythree {
+
+    from,
+    to {
+        transform: scale(1, 1);
+    }
+
+    25% {
+        transform: scale(0.9, 1.1);
+    }
+
+    50% {
+        transform: scale(1.1, 0.9);
+    }
+
+    75% {
+        transform: scale(0.95, 1.05);
+    }
+}
+
+.yfour{
+     position: absolute;
+     bottom: 0;
+     width: 100px;
+     bottom: -70%;
+     right: 0%;
+     animation: yfour 0.5s infinite;
+ 
+}
+
+
+@keyframes yfour {
+
+    from,
+    to {
+        transform: scale(1, 1);
+    }
+
+
+    100% {
+        transform: scale(1.1);
+        -webkit-transform: scale(1.1);
+        -moz-transform: scale(1.1);
+        -ms-transform: scale(1.1);
+        -o-transform: scale(1.1);
+}
+}
+
+
+
+/* hero section end */
+
+/*:::::::::::::Home page end::::::::::::*/
