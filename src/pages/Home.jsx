@@ -1,6 +1,8 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
-import Navbar from '../components/Navbar'
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import Navbar from '../components/Navbar';
+import CustomCursor from '../components/CustomCursor';
+
 
 
 //Image
@@ -12,8 +14,30 @@ import yfour from "/y4.svg"
 
 
 function Home() {
+    const [show, setShow] = useState(false);
+
+    const handleClick = () => {
+        setShow(true);
+        setTimeout(() => setShow(false), 3000); 
+    };
+
+    const styles = {
+        notification: {
+            position: 'fixed',
+            top: '20px',
+            right: '20px',
+            backgroundColor: '#e0b859',
+            color: 'white',
+            padding: '10px 20px',
+            borderRadius: '8px',
+            boxShadow: '0 2px 8px rgba(0,0,0,0.3)',
+            zIndex: 1000,
+        }
+     };
+
     return (
         <>
+            <CustomCursor/>
             <Navbar />
             <main className='float-left w-full'>
                 <section className='section-hero'>
@@ -25,7 +49,7 @@ function Home() {
                                              </svg> </span> <strong> enabling </strong> with YcGO</h1>
                                 <p className='sub-text mb-11'>Private browser enabling members to earn through consensus-governed browsing for uncensorable experiences with live support and debate.</p>
                                 <button type='button' className='theme-color-btn brn-btn' id=''>Get Started</button>
-                                <button type='button' className='white-color-btn brn-btn' id=''>Try Demo</button>
+                                <button type='button' onClick={handleClick} className='white-color-btn brn-btn' id=''>Try Demo</button>
                             </div>
 
 
@@ -43,6 +67,13 @@ function Home() {
                             </div>
                         </div>
                         <img src='/png-bckj.png' className='sm-pic' alt='bm'/>
+
+                        {show && (
+                                <div style={styles.notification}>
+                                🔔 Feature coming soon!
+                                </div>
+                            )}
+
                     </div>
                 </section>
 

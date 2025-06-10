@@ -467,7 +467,7 @@ nav li a:hover{
   position: fixed;
   width: 35px;
   height: 35px;
-  border: solid 2px rgba(255, 60, 34, 0.6);
+  border: solid 2px rgba(34, 148, 255, 0.6);
   border-radius: 50%;
   pointer-events: none;
   transform: translate(-50%, -50%);
@@ -484,7 +484,7 @@ nav li a:hover{
     margin: auto;
     border-radius: 50px;
     overflow: hidden;
-    background: rgba(255, 60, 34, 0.6);
+    background: rgba(34, 148, 255, 0.6);
     content: "";
 }
 
