@@ -1,12 +1,8 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
 import Navbar from '../components/Navbar';
 import CustomCursor from '../components/CustomCursor';
 
 
-
-//Image
-import ycgo from "/ycgo.png"
 import yone from "/y1.svg"
 import ytwo from "/y2.svg"
 import ythree from "/y3.png"
@@ -14,6 +10,7 @@ import yfour from "/y4.svg"
 
 
 function Home() {
+    
     const [show, setShow] = useState(false);
 
     const handleClick = () => {
@@ -37,6 +34,7 @@ function Home() {
 
     return (
         <>
+        <div className='top-bar float-left w-full'>
             <CustomCursor/>
             <Navbar />
             <main className='float-left w-full'>
@@ -78,9 +76,10 @@ function Home() {
                 </section>
 
             </main>
+        </div>
 
         </>
     )
 }
 
-export default Home
+export default Home;

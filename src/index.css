@@ -13,7 +13,6 @@
 
 body {
     font-family: "Inter", sans-serif;
-    background: #f1f1f1;
 }
 
 a {
@@ -43,7 +42,7 @@ li {
 }
 
 .theme-color-btn {
-    background-color: var(--secondary-theme-color);
+    background-color: #07356c;
     color: var(--text-white) !important;
     padding: 14px 35px;
     font-weight: 600;
@@ -60,13 +59,16 @@ li {
 
 header {
     z-index: 99;
+    padding-top: 7px;
 
 }
 
 /* navbar start */
+
 nav{
-    padding-block: 20px;
+    padding:0;
 }
+
 .navLink ul>li {
     padding-left: 40px;
     font-weight: 500;
@@ -148,22 +150,23 @@ nav{
 }
 
 .hero-main-text {
-    font-size: 55px;
+    font-size: 75px;
 
 }
 
 
 .white-color-btn {
     margin-left: 20px;
-    border: 2px solid var(--secondary-theme-color);
-    color: var(--secondary-theme-color);
+    border: 2px solid #07356c;
+    color: #07356c !important;
     padding: 14px 35px;
     font-weight: 600;
 border-radius: 15px;
 }
 .white-color-btn:hover{
     background: var(--theme-color) !important;
-    color: #000 !important;  
+    color: #fff !important; 
+    border: 2px solid var(--theme-color) !important; 
 }
 .m-nav-btn-hide{
     position: relative;
@@ -182,12 +185,8 @@ border-radius: 15px;
     top: 0;
     right: 0;
 }
-header,
+
 .section-hero{
-    background-color: #f1f1f1;
-}
-.section-hero{
-    background:#f1f1f1 !important;
     background-repeat: no-repeat;
     background-size: auto;
     background-position: right top;
@@ -348,7 +347,7 @@ nav li a:hover{
  padding: 12px 11px;
 }
 .signup-nows li:last-child a{
-    background: #84abdb;
+    background: #07356c;
     font-weight: 500;
     font-size: 16px;
     padding: 10px 30px;
@@ -365,14 +364,19 @@ nav li a:hover{
     color: #000 !important;
 }
 .section-hero{
-    background: #f7fbff url(../public/bg-back01.jpg) no-repeat;
-    background-size: cover;
-    width: 100%;
+
     
 }
+.top-bar{
+    background:  url(../public/hero-gradient-3.jpg) no-repeat !important;
+    background-size: cover;
+    width: 100%;
+    min-height: 100vh;
+}
 .banner-tms01{
-    width: 48%;
+    width: 100%;
     padding-top: 70px;
+    text-align: center;
 }
 .border-round-bar{
     border-radius: 50px;
@@ -385,7 +389,7 @@ nav li a:hover{
 
 }
 .offcanv{
-    background: #300513;
+    background: #07356c;
 }
 .clones-btn{
     
@@ -410,10 +414,11 @@ nav li a:hover{
 .container-hero {
     position: relative;
     height: 72vh;
+    padding-top: 60px;
 }
 
 .hero-main-text {
-    font-size: 50px;
+    font-size: 65px;
     font-family: "Plus Jakarta Sans", sans-serif;
     font-weight: 300;
     letter-spacing: -0.03em;
@@ -422,7 +427,7 @@ nav li a:hover{
     margin-bottom: 20px;
 }
 .hero-main-text span{
-    font-size: 50px;
+    font-size: 65px;
     font-family: "Plus Jakarta Sans", sans-serif;
     font-weight: 700; 
     position: relative;
@@ -431,7 +436,7 @@ nav li a:hover{
 }
 
 .hero-main-text strong{
-    font-size: 50px;
+    font-size: 65px;
     font-family: "Plus Jakarta Sans", sans-serif;
     font-weight: 700; 
     position: relative;
@@ -453,7 +458,11 @@ nav li a:hover{
 }
 
 .banner-tms01 .sub-text{
-    width: 70%;
+    width: 80%;
+    margin: auto;
+    margin-bottom: 70px;
+    margin-top: 30px;
+    font-size: 20px;
 }
 
 @media (min-width: 1280px) {
@@ -658,13 +667,13 @@ nav li a:hover{
 }
 .yone {
     position: absolute;
-    top: 60px;
+    top: 30px;
     right: 110px;
-    width: 200px;
+    width: 70px;
     animation: 2s ease 0s infinite alternate none running ithree;
 }
 .ytwo {
-    right: 250px;
+    left: 0;
     position: absolute;
     bottom: 0px;
     width: 150px;
@@ -733,6 +742,22 @@ nav li a:hover{
         margin-left: auto;
         display: none;
     }
+    .yfour,
+    .ytwo,
+    .yone{
+        display: none;
+    }
+    .banner-tms01 .sub-text {
+        width: 100%;
+        font-size: 14px;
+        margin-bottom: 24px;
+        margin-top: 20px;
+     }
+     .border-round-bar {
+
+        right: 10px;
+        position: relative;
+      }
 }
 @media(max-width:668px){
      .hero-main-text,

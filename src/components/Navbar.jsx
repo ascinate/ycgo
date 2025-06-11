@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { NavLink } from 'react-router-dom';
+
 
  const navItems = [
     { name: 'Home', path: '/' },
@@ -11,15 +12,28 @@ import { NavLink } from 'react-router-dom';
     { name: 'Sign up Now', path: '' }
     ];
 
+
+
+
 function Navbar() {
 
-     const navLinkClass = ({ isActive }) =>
+      const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 20);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+    const navLinkClass = ({ isActive }) =>
     `block py-2 px-3 rounded-sm md:p-0 font-medium ${
       isActive
         ? 'text-white bg-blue-700 md:bg-transparent md:text-blue-700 dark:text-white md:dark:text-blue-500'
         : 'text-gray-900 hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent'
     }`;
-
 
     const [isOpen, setIsOpen] = useState(false);
     
@@ -27,10 +41,12 @@ function Navbar() {
 
     return (
         <>
-        <header className='float-left w-full'>
-           <nav className="bg-white float-left border-gray-200 dark:bg-gray-900 w-full">
+        <header className={`float-left w-full transition-all duration-300 ${
+            isScrolled ? 'fixed top-0 left-0 z-50 shadow dark:bg-gray-900' : 'relative'
+            }`}>
+           <nav className="float-left border-gray-200 dark:bg-gray-900 w-full">
                <div className='container mx-auto'>
-                   <div className="max-w-screen-xl moible-full flex flex-wrap items-center mx-auto p-4">
+                   <div className="max-w-screen-xl moible-full flex flex-wrap items-center mx-auto">
                         <NavLink to='/' className="flex loggos items-center space-x-3 rtl:space-x-reverse">
                               <img src='/logo.png' className="logo-ps" alt='logo'/>
                         </NavLink>
@@ -41,8 +57,8 @@ function Navbar() {
                             </svg>
                         </button>
 
-                        <div className="md:block md:w-auto" id="navbar-default">
-                            <ul className="font-medium signup-nows flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+                        <div className="md:block" id="navbar-default">
+                            <ul className="font-medium signup-nows flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg  md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0  dark:border-gray-700">
                                 {navItems.map((item, index) => (
                                     <li key={index}>
                                     <NavLink to={item.path} className={navLinkClass}>
