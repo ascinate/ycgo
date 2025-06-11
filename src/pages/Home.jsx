@@ -39,7 +39,7 @@ function Home() {
             <Navbar />
             <main className='float-left w-full'>
                 <section className='section-hero'>
-                    <div className='wrapper'>
+                    
                         <div className='container-hero relative'>
                             <div className='banner-tms01'>
                                 <h1 className='hero-main-text'>Private <span> browsing <svg width="300" height="12" viewBox="0 0 300 12" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -72,7 +72,6 @@ function Home() {
                                 </div>
                             )}
 
-                    </div>
                 </section>
 
             </main>

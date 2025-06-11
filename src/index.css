@@ -369,7 +369,7 @@ nav li a:hover{
 }
 .top-bar{
     background:  url(../public/hero-gradient-3.jpg) no-repeat !important;
-    background-size: cover;
+    background-size: cover !important;
     width: 100%;
     min-height: 100vh;
 }
@@ -694,7 +694,15 @@ nav li a:hover{
         right: 0;
     }
 }
-
+@media(max-width:1025px){
+    .signup-nows li:last-child a{
+        right: -20px;
+    }
+    .signup-nows li a {
+        font-size: 14px;
+        padding: 12px 4px;
+    }
+}
 @media(max-width:910px){
     #navbar-default{
         display: none;
@@ -758,6 +766,11 @@ nav li a:hover{
         right: 10px;
         position: relative;
       }
+}
+@media(max-width:768px){
+    .loggos {
+        width: 21%;
+    }
 }
 @media(max-width:668px){
      .hero-main-text,
