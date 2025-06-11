@@ -39,6 +39,26 @@ function Navbar() {
     
     const toggleMenu = () => setIsOpen(!isOpen);
 
+         const [show, setShow] = useState(false);
+        
+          const handleClick = () => {
+            setShow(true);
+            setTimeout(() => setShow(false), 3000); 
+          };
+            const styles = {
+          notification: {
+            position: 'fixed',
+            top: '20px',
+            right: '20px',
+            backgroundColor: '#4caf50',
+            color: 'white',
+            padding: '10px 20px',
+            borderRadius: '8px',
+            boxShadow: '0 2px 8px rgba(0,0,0,0.3)',
+            zIndex: 1000,
+          }
+        };
+
     return (
         <>
         <header className={`float-left w-full transition-all duration-300 ${
@@ -68,6 +88,9 @@ function Navbar() {
                                 ))}
                                 
                             </ul>
+                            <li>
+                                    <button type='button' onClick={handleClick} className='signup01'>Sign up Now</button>
+                            </li>
                         </div>
 
                         <div className={`fixed top-0 offcanv left-0 w-64 h-full bg-white dark:bg-gray-900 shadow-lg z-50 transform transition-transform duration-300 ease-in-out ${
@@ -94,6 +117,13 @@ function Navbar() {
                </div>
            </nav>
           
+          
+           {show && (
+                <div style={styles.notification}>
+                🔔 Feature coming soon!
+                </div>
+            )}
+            
         </header>
         
         </>
