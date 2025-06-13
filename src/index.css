@@ -194,12 +194,16 @@ border-radius: 15px;
 
 .sm-pic{
     right: 0;
-    top:200px;
+    top:0;
     position: absolute;
     width: 37%;
     opacity: 0.2;
 }
 
+main{
+    overflow: hidden;
+    padding-bottom: 70px;
+}
 
 
 
@@ -292,7 +296,7 @@ border-radius: 15px;
      position: absolute;
      bottom: 0;
      width: 100px;
-     right: 0%;
+     right: 10%;
      animation: yfour 0.5s infinite;
  
 }
@@ -673,7 +677,7 @@ nav li a:hover{
     animation: 2s ease 0s infinite alternate none running ithree;
 }
 .ytwo {
-    left: 0;
+    left: 70px;
     position: absolute;
     bottom: 0px;
     width: 150px;
